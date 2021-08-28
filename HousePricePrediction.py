@@ -1,10 +1,11 @@
 import streamlit as st
 import joblib
-import funtions
+#import funtions
 
 #import warnings
 #warnings.filterwarnings("ignore", category=FutureWarning)
 
+st.cache
 import re
 import numpy as np
 import pandas as pd
