@@ -7,8 +7,8 @@ scikit-learn
 datetime
 lazypredict
 sklearn
-functools
 geopy
 statsmodels
 warnings
 joblib
+functools
