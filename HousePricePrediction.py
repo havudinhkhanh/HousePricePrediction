@@ -277,99 +277,99 @@ elif choice == 'Prediction':
     if district == 'district 1':
         pr_district = 'quận 1'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'district 2':
         pr_district = 'quận 2'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'district 3':
         pr_district = 'quận 3'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'district 4':
         pr_district = 'quận 4'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'district 5':
         pr_district = 'quận 5'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'district 6':
         pr_district = 'quận 6'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'district 7':
         pr_district = 'quận 7'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'district 8':
         pr_district = 'quận 8'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'district 9':
         pr_district = 'quận 9'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'district 10':
         pr_district = 'quận 10'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'district 11':
         pr_district = 'quận 11'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'district 12':
         pr_district = 'quận 12'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'binh tan':
         pr_district = 'quận bình tân'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'binh thanh':
         pr_district = 'quận bình thạnh'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'go vap':
         pr_district = 'quận gò gấp'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'phu nhuan':
         pr_district = 'quận phú nhuận'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'tan binh':
         pr_district = 'quận tân bình'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'tan phu':
         pr_district = 'quận tân phú'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'thu duc':
         pr_district = 'quận thủ đức'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'binh chanh (town)':
         pr_district = 'huyện bình chánh'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'can gio (town)':
         pr_district = 'huyện cần giờ'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'cu chi (town)':
         pr_district = 'huyện củ chi'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'hoc mon (town)':
         pr_district = 'huyện hóc môn'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
     elif district == 'nha be (town)':
         pr_district = 'huyện nhà bè'
         pr_ward = col2.radio('Please specific your desired ward:',
-                        funtions.create_ward_tuple(di_wa_df, pr_district, 'ward'))
+                        create_ward_tuple(di_wa_df, pr_district, 'ward'))
 
     # Alley - Radio
     alley = col2.radio(
@@ -421,7 +421,7 @@ elif choice == 'Prediction':
     # Make predictions
     st.text('You could always change your needs!!!')
     st.subheader('Your predictive results')
-    funtions.make_prediction(poisson_modl, min_max, dfOneHot, pr_district, pr_ward, pr_alley, pr_squared_m2,
+    make_prediction(poisson_modl, min_max, dfOneHot, pr_district, pr_ward, pr_alley, pr_squared_m2,
                     pr_floor, pr_bedroom, pr_bhx, pr_vin, pr_market, pr_hospital, pr_school,
                     pr_hospital_distance)
 
