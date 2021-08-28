@@ -7,9 +7,6 @@ scikit-learn
 datetime
 lazypredict
 sklearn
-sklearn.svm
-sklearn.ensemble
-sklearn.pipeline
 functools
 geopy
 statsmodels
