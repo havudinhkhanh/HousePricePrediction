@@ -1,34 +1,34 @@
 import streamlit as st
-import joblib
+#import joblib
 import funtions
 
-import warnings
-warnings.filterwarnings("ignore", category=FutureWarning)
+#import warnings
+#warnings.filterwarnings("ignore", category=FutureWarning)
 
 import re
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from datetime import datetime
-import lazypredict
-from lazypredict.Supervised import LazyRegressor
+#from datetime import datetime
+#import lazypredict
+#from lazypredict.Supervised import LazyRegressor
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression, PoissonRegressor
-import lightgbm as ltb
-from sklearn.svm import SVR
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.pipeline import Pipeline, make_pipeline
+#from sklearn.linear_model import LinearRegression, PoissonRegressor
+#import lightgbm as ltb
+#from sklearn.svm import SVR
+#from sklearn.ensemble import RandomForestRegressor
+#from sklearn.pipeline import Pipeline, make_pipeline
 from sklearn import preprocessing
 from scipy import stats
 from matplotlib.gridspec import GridSpec
 
 # Geographic
-from functools import partial
-from geopy.geocoders import Nominatim
-from geopy import distance
-from geopy.distance import geodesic
+#from functools import partial
+#from geopy.geocoders import Nominatim
+#from geopy import distance
+#from geopy.distance import geodesic
 
 # Evaluate 
 from sklearn.metrics import mean_squared_error, mean_absolute_error, mean_poisson_deviance
