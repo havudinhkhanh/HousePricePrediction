@@ -9,6 +9,4 @@ lazypredict
 sklearn
 geopy
 statsmodels
-warnings
-joblib
 functools
