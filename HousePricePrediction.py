@@ -1,5 +1,5 @@
 import streamlit as st
-#import joblib
+import joblib
 import funtions
 
 #import warnings
