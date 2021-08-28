@@ -9,4 +9,3 @@ lazypredict
 sklearn
 geopy
 statsmodels
-functools
