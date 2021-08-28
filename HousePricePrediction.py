@@ -5,7 +5,6 @@ import joblib
 #import warnings
 #warnings.filterwarnings("ignore", category=FutureWarning)
 
-st.cache
 import re
 import numpy as np
 import pandas as pd
@@ -39,6 +38,71 @@ from statsmodels.formula.api import ols
 
 # Tuning
 from sklearn.model_selection import GridSearchCV
+
+def create_ward_tuple(df, district, ward):
+    tup = sorted(tuple(df[df.district == district][ward]))
+    return tup
+
+def make_prediction(model, min_max, dfOneHot, pr_district, pr_ward, pr_alley, pr_squared_m2,
+                    pr_floor, pr_bedroom, pr_bhx, pr_vin, pr_market, pr_hospital, pr_school,
+                    pr_hospital_distance):
+    # Create dictionary
+    administrative_loc = str("S_"+pr_district+" | "+pr_ward)
+    raw_input_data = {
+        'Distrct': pr_district,
+        'Ward': pr_ward,
+        'Alley': pr_alley,
+        'Squared_m2': pr_squared_m2,
+        'Number of floors': int(pr_floor),
+        'Number of bedrooms': int(pr_bedroom),
+        'Nearby BHX': int(pr_bhx),
+        'Nearby Vnmart+': int(pr_vin),
+        'Nearby traditional market': int(pr_market),
+        'Nearby health care institution': int(pr_hospital),
+        'Nearby education institution': int(pr_school),
+        'Distance to the nearest healthcare institution': pr_hospital_distance
+    }
+
+    input_data = {
+        'alley': pr_alley,
+        'log_floor': np.log(pr_floor),
+        'squared_m2': np.log(pr_squared_m2),
+        'log_b_room': np.log(pr_bedroom),
+        'bhx_1km': pr_bhx,
+        'vin_1km': pr_vin,
+        'market_1km': pr_market,
+        'hospital_1km': pr_hospital,
+        'school_1km': pr_school,
+        'hospital_distance': pr_hospital_distance
+    }
+
+    test_df = pd.DataFrame(input_data, 
+                        columns = ['alley', 'log_floor', 'squared_m2', 'log_b_room', 
+                                    'bhx_1km', 'vin_1km', 'market_1km', 'hospital_1km', 'school_1km', 'hospital_distance'], index = [0])
+
+    # Create Columns of administrative loc
+    input_var = ['alley', 'scaled_log_floor', 'scaled_squared_m2', 'scaled_log_b_room',
+                'scaled_bhx_1km', 'scaled_vin_1km', 'scaled_market_1km', 'scaled_hospital_1km', 'scaled_school_1km', 'scaled_hospital_distance']
+    for x in dfOneHot.columns:
+        input_var.append(x)
+        if x == administrative_loc:
+            test_df[x] = float(1)
+        else:
+            test_df[x] = float(0)
+            
+    # Scaled value
+    cols=['squared_m2', 'log_floor', 'log_b_room', 'bhx_1km', 'vin_1km', 'market_1km', 'hospital_1km', 'school_1km', 'hospital_distance']
+    s_cols_name = ['scaled_' + x for x in cols]
+
+    scaled_values = min_max.transform(test_df[cols])
+    test_df[s_cols_name] = pd.DataFrame(scaled_values, columns = s_cols_name)
+    test_df = test_df[input_var]
+
+
+    # Predict new value
+    st.write('Based on your preferences:\n\n', pd.DataFrame(raw_input_data, index = ['Value']))
+    st.write('\nThe price would be: ', round(model.predict(test_df)[0],3))
+
 
 # Load model
 filename = 'poisson_glm.sav'
